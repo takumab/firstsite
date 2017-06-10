@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h3>Items in stock</h3>
+  <a href="{% url 'index' %}">Back to item list</a>
+  <h3>Items not in stock</h3>
   <ul>
     {% for item in items %}
       <li>
-        <a href="{% url 'item_detail' item.id %}">
+        <a href="#">
           {{ item.title|capfirst }}
         </a>
       </li>
     {% endfor %}
   </ul>
 
-  <a href="{% url 'out_of_stock' %}">Items not in stock</a>
-{% endblock content %}
+{%endblock%}

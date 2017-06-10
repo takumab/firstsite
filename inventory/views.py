@@ -18,3 +18,9 @@ def item_detail(request, id):
     return render(request, 'inventory/item_detail.html', {
         'item': item,
     })
+
+def out_of_stock(request):
+    items = Item.objects.exclude(amount=10)
+    return render(request, 'inventory/out_of_stock.html', {
+        'items': items,
+    })

@@ -20,5 +20,6 @@ from inventory import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^item/(?P<id>\d+)/', views.item_detail, name='item_detail'),
+    url(r'^out_of_stock/', views.out_of_stock, name='out_of_stock'),
     url(r'^admin/', admin.site.urls),
 ]
